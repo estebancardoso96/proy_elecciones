@@ -3,7 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import plotly.express as px
 pd.options.plotting.backend = 'plotly' # cambio el backend, lo hago interactivo con plotly
-import os
 import datetime
 import re
 # Desactiva advertencias
@@ -410,8 +409,7 @@ def crear_grafico_pestana_2(value):
 
 # Llamar al callback de la pestana 4 (IDEM)
 
-if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 10000))  # Render asigna el puerto
-    app.run_server(host="0.0.0.0", port=port)
+if __name__ == "__main__":
+    app.run_server(debug=True)
 
 
