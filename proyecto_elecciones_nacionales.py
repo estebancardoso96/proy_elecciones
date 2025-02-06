@@ -179,6 +179,7 @@ from dash.dependencies import Input, Output
 
 # Configuración de Dash con Bootstrap
 app = Dash(__name__, external_stylesheets=[dbc.themes.JOURNAL]) 
+server = app.server
 
 # Configuración de la plantilla de Plotly: opciones 'plotly', 'seaborn' (muy buena), simple_white (media)
 pio.templates.default = "seaborn"
