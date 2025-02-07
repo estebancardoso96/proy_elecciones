@@ -1,3 +1,5 @@
+import plotly.express as px
+
 # Funcion limpieza (coluna porcentajes)
 
 def limpiar_y_convertir_a_float(col):
