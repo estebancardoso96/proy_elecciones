@@ -159,28 +159,7 @@ segunda_vuelta = segunda_vuelta.rename(columns={'Partido político / Coalición'
 segunda_vuelta['Partido político'] = segunda_vuelta['Partido político'].str.replace('Partido Nacional - Coalición Multicolor', 'Partido Nacional').replace('Partido Nacional-Coalición Republicana', 'Partido Nacional')
 segunda_vuelta['Partido político'] = segunda_vuelta['Partido político'].replace('Partido Socialista - Frente Amplio','Frente Amplio')
 
-# color segunda vuelta
-
-color_balotaje = {
-    "Partido Nacional": "#87CEEB",  # Celeste
-    "Partido Colorado": "#d62728",  # Rojo (colorado)
-    "Frente Amplio": "#2ca02c", # verde
-    "Partido Nacional - Coalición Multicolor": "#6A0DAD"   # morado
-    # Agrega aquí todos los partidos que quieras
-}
-
-# colores de los partidos
-
-color_map = {
-    "Partido Nacional": "#87CEEB",  # Celeste
-    "Partido Colorado": "#d62728",  # Rojo (colorado)
-    "Frente Amplio": "#2ca02c", # verde
-    "Partido Independiente": "#6A0DAD",   # morado
-    "Partido Socialista":"#FFD700",
-    "Cabilo Abierto":"#556B2F",
-    "Nuevo Espacio":"#8A2BE2"
-    # Agrega aquí todos los partidos que quieras
-}
+from funciones import color_map
 
 import dash
 import plotly.io as pio
