@@ -76,7 +76,7 @@ df['Fecha']= pd.to_datetime(df['Fecha'])
 df['Año'] = df['Fecha'].dt.year
 vb_va = df.query('Sigla == "VA" or Sigla == "VB"')
 vb_va['Partido'] = vb_va['Partido'].str.replace('Votos anulados','Voto Anulado').replace('Votos en blanco','Voto en Blanco')
-vb_va['Porcentaje_suma'] = vb_va.groupby('Año')['Porcentaje'].transform(sum)
+vb_va['Porcentaje_suma'] = vb_va.groupby('Año')['Porcentaje'].transform("sum")
 vb_va['Suma'] = 'VA + VB' 
 
 # Para que el partido Independiente solamente aparezca como aliado en 2019 y 2024 
@@ -160,6 +160,7 @@ segunda_vuelta['Partido político'] = segunda_vuelta['Partido político'].str.re
 segunda_vuelta['Partido político'] = segunda_vuelta['Partido político'].replace('Partido Socialista - Frente Amplio','Frente Amplio')
 
 from funciones import color_map
+from funciones import color_balotaje
 
 import dash
 import plotly.io as pio
