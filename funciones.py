@@ -1,5 +1,28 @@
 import plotly.express as px
 
+# color segunda vuelta
+
+color_balotaje = {
+    "Partido Nacional": "#87CEEB",  # Celeste
+    "Partido Colorado": "#d62728",  # Rojo (colorado)
+    "Frente Amplio": "#2ca02c", # verde
+    "Partido Nacional - Coalición Multicolor": "#6A0DAD"   # morado
+    # Agrega aquí todos los partidos que quieras
+}
+
+# colores de los partidos
+
+color_map = {
+    "Partido Nacional": "#87CEEB",  # Celeste
+    "Partido Colorado": "#d62728",  # Rojo (colorado)
+    "Frente Amplio": "#2ca02c", # verde
+    "Partido Independiente": "#6A0DAD",   # morado
+    "Partido Socialista":"#FFD700",
+    "Cabilo Abierto":"#556B2F",
+    "Nuevo Espacio":"#8A2BE2"
+    # Agrega aquí todos los partidos que quieras
+}
+
 # Funcion limpieza (coluna porcentajes)
 
 def limpiar_y_convertir_a_float(col):
